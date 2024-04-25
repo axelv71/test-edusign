@@ -1,0 +1,12 @@
+<div class="container">
+    <b *ngIf="student">Student: {{ student["FIRSTNAME"] }} {{ student["LASTNAME"] }}</b>
+    <p *ngIf="student">Signed at: {{ student["signatureTimestamp"] }}</p>
+    <p *ngIf="student">Est présent: {{ student["presenceState"] }}</p>
+    <p *ngIf="student">Commantaire : {{ student["comment"] }} </p>
+
+    <canvas class="canvas" width="100px" height="100px"></canvas>
+    <div class="button_container">
+        <button class="button" (click)="sign()">Sign</button>
+        <button class="button" (click)="markAsAbsent()">Absent</button>
+    </div>
+</div>
